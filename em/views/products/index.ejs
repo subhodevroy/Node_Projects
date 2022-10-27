@@ -1,0 +1,20 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>All products</title>
+    </head>
+    <body>
+        <h1><%= category %> Products</h1>
+        <ul>
+            <% for(let products of Product) {%> 
+            <li><a href="/products/<%= products.id %> "><%= products.name %></a>  </li>
+            <% } %> 
+        </ul>
+        <% if (category!=='ALL') { %>
+         <a href='/products'>ALL Products</a>
+        <% } %>
+    </body>
+    </html>
